@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "2e7dc543-61f5-442a-8afd-2230419a2aea",
+		"name": "cms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41298508"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"payalkutana12\",\n    \"password\":\"Testabc123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/accounts/login"
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token f382324ca3d973ce23c8de7189120a46208eba02",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/me"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 76cfe878328ebe40ee04a26115795ca46e349163",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/accounts/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c4a01c6d3be7210810fa82d358ddb622980b129",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"payalkutana11\",\n    \"email\":\"payal.jb1.1998@gmail.com\",\n    \"password\":\"Testabc123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/accounts/update"
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"payalkutana12\",\n    \"email\":\"payal.jb1.1999@gmail.com\",\n    \"password\":\"Testabc123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 3c4a01c6d3be7210810fa82d358ddb622980b129",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" :  \"third post\",\n    \"description\" : \"third post description \",\n    \"content\" : \"third post content \",\n    \"user\" : 1,\n    \"is_public\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/blog"
+			},
+			"response": []
+		},
+		{
+			"name": "get posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token f382324ca3d973ce23c8de7189120a46208eba02",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/blog"
+			},
+			"response": []
+		},
+		{
+			"name": "get post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token f382324ca3d973ce23c8de7189120a46208eba02",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/blog/3"
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token f382324ca3d973ce23c8de7189120a46208eba02",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" :  \"third post updated\",\n    \"description\" : \"third post description updated\",\n    \"content\" : \"third post content updated\",\n    \"user\" : 1,\n    \"is_public\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/blog/3"
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token f382324ca3d973ce23c8de7189120a46208eba02",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/blog/3"
+			},
+			"response": []
+		},
+		{
+			"name": "unlike post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2d82be127681c14ec896823e29c195669ebec6c0",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/like/1"
+			},
+			"response": []
+		},
+		{
+			"name": "like post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2d82be127681c14ec896823e29c195669ebec6c0 ",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/like/1"
+			},
+			"response": []
+		}
+	]
+}
